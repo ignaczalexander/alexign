@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/alexign/static/css/main.fb456979.chunk.css",
+    "main.js": "/alexign/static/js/main.71079427.chunk.js",
+    "main.js.map": "/alexign/static/js/main.71079427.chunk.js.map",
+    "runtime-main.js": "/alexign/static/js/runtime-main.92425282.js",
+    "runtime-main.js.map": "/alexign/static/js/runtime-main.92425282.js.map",
+    "static/js/2.c4d4822f.chunk.js": "/alexign/static/js/2.c4d4822f.chunk.js",
+    "static/js/2.c4d4822f.chunk.js.map": "/alexign/static/js/2.c4d4822f.chunk.js.map",
+    "index.html": "/alexign/index.html",
+    "precache-manifest.3eac7dae54c7147dd99b4ed184db8fc7.js": "/alexign/precache-manifest.3eac7dae54c7147dd99b4ed184db8fc7.js",
+    "service-worker.js": "/alexign/service-worker.js",
+    "static/css/main.fb456979.chunk.css.map": "/alexign/static/css/main.fb456979.chunk.css.map",
+    "static/js/2.c4d4822f.chunk.js.LICENSE.txt": "/alexign/static/js/2.c4d4822f.chunk.js.LICENSE.txt",
+    "static/media/undraw_message_sent_1030.svg": "/alexign/static/media/undraw_message_sent_1030.d91be947.svg",
+    "static/media/undraw_programming_2svr.svg": "/alexign/static/media/undraw_programming_2svr.5a78f7e6.svg",
+    "static/media/undraw_progressive_app_m9ms.svg": "/alexign/static/media/undraw_progressive_app_m9ms.1fef6459.svg",
+    "static/media/undraw_wordpress_utxt.svg": "/alexign/static/media/undraw_wordpress_utxt.dba04955.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.92425282.js",
+    "static/js/2.c4d4822f.chunk.js",
+    "static/css/main.fb456979.chunk.css",
+    "static/js/main.71079427.chunk.js"
+  ]
+}
