@@ -1,0 +1,32 @@
+.container {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.elements {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, 160px);
+}
+.element {
+  background-color: #95b9fd;
+  border-radius: 5px;
+  height: 107px;
+}
+@media only screen and (min-width: 640px) {
+  .elements {
+    grid-template-columns: repeat(3, 10rem);
+  }
+}
+@media only screen and (min-width: 640px) {
+  .elements {
+    grid-template-columns: repeat(3, 200px);
+    gap: 1rem;
+  }
+  .element {
+    height: 133px;
+    width: 200px;
+  }
+}
