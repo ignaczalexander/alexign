@@ -10,7 +10,13 @@ const PortfolioSection = () => {
         subtitle="Take a look at our featured work"
       />
       <div className={styles.elements}>
-        <div className={styles.element}></div>
+        <div className={styles.element}>
+          <a
+            href="https://tmwapp.herokuapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
+        </div>
         <div className={styles.element}></div>
         <div className={styles.element}></div>
         <div className={styles.element}></div>
