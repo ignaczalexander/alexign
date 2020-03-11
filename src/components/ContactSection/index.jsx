@@ -11,18 +11,28 @@ const ContactSection = () => {
   const [phone, setPhone] = useState("");
   const [description, setDescription] = useState("");
   const [errors, setErrors] = useState([]);
-  const handleSend = e => {
-    e.preventDefault();
+  const [emailSent, setEmailSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const checkFields = () => {
     setErrors([]);
     let localErrors = [];
-    if (name.length < 2) {
+    if (name.length === 0) {
       localErrors.push("name");
-      console.log("name length", localErrors);
     }
     if (email.length < 4) localErrors.push("email");
-    if (description.length < 4) localErrors.push("description");
+    if (description.length === 0) localErrors.push("description");
+    console.log("localerr", localErrors);
     setErrors(localErrors);
-    if (errors.length === 0) {
+    if (localErrors.length > 0) {
+      return false;
+    }
+    return true;
+  };
+  const handleSend = e => {
+    e.preventDefault();
+    console.log("errors", errors);
+    if (checkFields()) {
+      setLoading(true);
       const templateParams = {
         name,
         email,
@@ -39,13 +49,15 @@ const ContactSection = () => {
         .then(
           response => {
             console.log("SUCCESS!", response.status, response.text);
+            setEmailSent(true);
+            setLoading(false);
           },
           err => {
             console.log("FAILED...", err);
+            setLoading(false);
           }
         );
     }
-    console.log(errors);
   };
   const handleChange = (e, fieldName) => {
     switch (fieldName) {
@@ -74,51 +86,73 @@ const ContactSection = () => {
       />
       <div className={styles.row}>
         <img src={illustration} alt="" />
-        <form onSubmit={handleSend}>
-          {errors.length > 0 && (
-            <small>Please fill in the required fields</small>
-          )}
-          <input
-            id="name"
-            onChange={e => handleChange(e, "name")}
-            value={name}
-            placeholder="Name"
-            type="text"
-            className={classnames({
-              [styles.invalid]: errors.includes("name")
-            })}
-          />
-          <input
-            id="email"
-            onChange={e => handleChange(e, "email")}
-            value={email}
-            placeholder="Email"
-            type="email"
-            className={classnames({
-              [styles.invalid]: errors.includes("email")
-            })}
-          />
-          <input
-            id="phone"
-            onChange={e => handleChange(e, "phone")}
-            value={phone}
-            placeholder="Phone number"
-            type="text"
-          />
-          <textarea
-            placeholder="Tell us about your case"
-            name="description"
-            id="description"
-            onChange={e => handleChange(e, "description")}
-            value={description}
-            cols="30"
-            rows="10"
-            className={classnames({
-              [styles.invalid]: errors.includes("description")
-            })}
-          ></textarea>
-          <input type="submit" value="Send" />
-        </form>
+        {emailSent ? (
+          <div className={styles.email_sent}>
+            <div>Thank you for contacting us!</div>
+            <div>We will get backt to you in 24 hours.</div>
+          </div>
+        ) : (
+          <form onSubmit={handleSend}>
+            {errors.length > 0 && (
+              <small>Please fill in the required fields</small>
+            )}
+            <input
+              id="name"
+              onChange={e => handleChange(e, "name")}
+              value={name}
+              placeholder="Name"
+              type="text"
+              className={classnames({
+                [styles.invalid]: errors.includes("name")
+              })}
+            />
+            <input
+              id="email"
+              onChange={e => handleChange(e, "email")}
+              value={email}
+              placeholder="Email"
+              type="email"
+              className={classnames({
+                [styles.invalid]: errors.includes("email")
+              })}
+            />
+            <input
+              id="phone"
+              onChange={e => handleChange(e, "phone")}
+              value={phone}
+              placeholder="Phone number"
+              type="text"
+            />
+            <textarea
+              placeholder="Tell us about your case"
+              name="description"
+              id="description"
+              onChange={e => handleChange(e, "description")}
+              value={description}
+              cols="30"
+              rows="10"
+              className={classnames({
+                [styles.invalid]: errors.includes("description")
+              })}
+            ></textarea>
+            <button
+              type="submit"
+              disabled={loading}
+              className={styles.btn_send}
+            >
+              {loading ? (
+                <div className={styles.dots3} id="dots3">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              ) : (
+                <span>Send</span>
+              )}
+            </button>
+          </form>
+        )}
       </div>
     </div>
   );
