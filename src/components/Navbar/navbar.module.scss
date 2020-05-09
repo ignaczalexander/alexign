@@ -1,3 +1,4 @@
+@import "../../assets/styles/colors.scss";
 .container {
   display: flex;
   justify-content: space-between;
@@ -7,9 +8,15 @@
   width: 100%;
 }
 .logo {
-  color: #4e4e4e;
-  font-size: 1.5rem;
-  font-weight: 600;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  img {
+    max-height: 28px;
+    // width: 100%;
+  }
 }
 .open {
   font-size: 1.5rem;
@@ -20,7 +27,7 @@
 }
 .contact {
   font-size: 0.75rem;
-  background-color: #36aaff;
+  background-color: $blue_primary;
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
   color: white;
@@ -36,7 +43,7 @@
   z-index: 99;
   top: 0;
   left: 0;
-  background-color: #36aaff;
+  background-color: $blue_primary;
   overflow-x: hidden;
   transition: 0.3s ease;
 
@@ -78,7 +85,11 @@
     text-decoration: none;
   }
   .logo {
-    font-size: 2rem;
+    position: static;
+    transform: none;
+    img {
+      max-height: 32px;
+    }
   }
   .contact_mobile {
     display: none;
@@ -97,10 +108,10 @@
         border: 2px solid transparent;
         display: block;
         &:hover {
-          border-bottom: 2px solid #36aaff;
+          border-bottom: 2px solid $blue_primary;
         }
         &.contact {
-          background-color: #36aaff;
+          background-color: $blue_primary;
           padding: 0.5rem 1rem;
           border-radius: 4px;
           margin-right: 0;
