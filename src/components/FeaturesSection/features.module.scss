@@ -1,3 +1,4 @@
+@import "../../assets/styles/colors.scss";
 .container {
   display: flex;
   flex-direction: column;
@@ -25,13 +26,13 @@
 //   max-width: 1200px;
 // }
 .feature_item {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   // align-items: center;
   // color: white;
   // padding: 3rem 5rem;
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   // padding-bottom: 5rem;
   box-sizing: border-box;
   text-align: center;
@@ -40,8 +41,55 @@
     background-color: #f7fcff;
   }
   i {
-    font-size: 3rem;
-    color: #36aaff;
+    font-size: 2.5rem;
+    color: $blue_primary;
+  }
+  .description {
+    font-weight: 400;
+  }
+  .skill_list {
+    // margin: 2rem;
+    // margin-left: 4rem;
+    margin-top: 1rem;
+    margin: 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // text-align: center;
+    // justify-items: center;
+
+    .list_item {
+      // display: flex;
+      // flex: 1;
+      // align-items: center;
+      display: flex;
+      align-items: center;
+      // margin: 0.5rem 0;
+      // text-align: left;
+      padding: 0.25rem 0;
+      // span {
+      //   position: relative;
+      //   display: inline-block;
+      // }
+    }
+    .dot {
+      height: 6px;
+      width: 6px;
+      border-radius: 50%;
+      background-color: rgb(137, 208, 255);
+      margin-right: 0.75rem;
+    }
+    // span::before {
+    //   left: -15px;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    //   content: "";
+    //   // content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    //   // display: flex; /* Needed to add space between the bullet and the text */
+    //   // align-items: center;
+    //   // justify-content: center;
+    //   // margin-left: 0; /* Also needed for space (tweak if needed) */
+    //   // font-size: 1.5rem;
+    // }
   }
 }
 @media only screen and (min-width: 768px) {
