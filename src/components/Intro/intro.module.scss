@@ -1,3 +1,4 @@
+@import "../../assets/styles/colors.scss";
 .container {
   height: 100vh;
   display: flex;
@@ -11,7 +12,7 @@
   justify-content: space-evenly;
   flex-direction: column;
   color: #4e4e4e;
-  padding: 0 1rem;
+  // padding: 0 1rem;
   // background-color: rgb(163, 163, 163);
   // padding: 5rem 0 0 0;
   // margin-bottom: 6rem;
@@ -27,16 +28,17 @@
     font-size: 1rem;
   }
 
-  img {
+  .illustration {
     // height: 300px;
     // max-width: 90%;
-    width: 100%;
+    width: 80%;
     // margin-bottom: 2rem;
   }
 }
 .text {
-  margin-top: 15%;
-  margin-bottom: 15%;
+  display: flex;
+  align-items: center;
+  flex: 1;
   h1 {
     font-size: 32px;
     margin: 0;
@@ -47,6 +49,12 @@
     font-size: 20px;
     // margin-bottom: 6rem;
   }
+}
+.description {
+  background-color: $blue_primary;
+  color: white;
+  flex: 1;
+  padding: 0 1rem;
 }
 
 @media only screen and (min-width: 640px) {
@@ -68,7 +76,7 @@
     h2 {
       // margin-bottom: 6rem;
     }
-    img {
+    .illustration {
       height: 300px;
       max-width: 90%;
       margin-bottom: 2rem;
