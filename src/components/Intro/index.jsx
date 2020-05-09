@@ -10,13 +10,17 @@ const Intro = () => {
       <Navbar />
       <div className={styles.content}>
         <div className={styles.text}>
-          <h1>High quality professional websites</h1>
-          <h2>Beautiful. Fast. Affordable.</h2>
+          <h1>Full Stack Web & iOS developer</h1>
+          {/* <h2>Beautiful. Fast. Affordable.</h2> */}
         </div>
-        <img src={illustration} alt="" />
-        <div>
+        <img className={styles.illustration} src={illustration} alt="" />
+        <div className={styles.description}>
           <h2>See what we can do</h2>
-          <h3>Lorem ipsum dolor</h3>
+          <p>
+            Lorem ipsume sad sde Lorem ipsume sad sde Lorem ipsume sad sde Lorem
+            ipsume sad sde Lorem ipsume sad sde ipsume sad sde Lorem ipsume sad
+            sdeipsume sad sde Lorem ipsume sad sde
+          </p>
         </div>
       </div>
     </div>
