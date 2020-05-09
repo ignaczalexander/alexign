@@ -1,3 +1,4 @@
+@import "../../assets/styles/colors.scss";
 .container {
   padding-top: 2rem;
   text-align: center;
@@ -42,7 +43,7 @@
   }
   .btn_send {
     color: white;
-    background-color: #36aaff;
+    background-color: $blue_primary;
     height: 2.5rem;
     cursor: pointer;
     box-sizing: border-box;
