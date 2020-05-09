@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./navbar.module.scss";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
+import logo from "../../assets/img/logo.png";
 export const Navbar = () => {
   const [navOpened, setNavOpened] = useState(false);
   return (
@@ -11,7 +12,7 @@ export const Navbar = () => {
         className={classnames("fas fa-bars", styles.open)}
       ></i>
       <Link className={styles.logo} to="/">
-        alexign
+        <img src={logo} alt="" />
       </Link>
       <ul className={styles.list_desktop}>
         <li>
