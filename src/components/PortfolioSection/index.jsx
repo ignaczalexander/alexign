@@ -4,6 +4,7 @@ import Titles from "../shared/Titles";
 import tmwThumbnail from "../../assets/img/trackMyWorkThumbnail.png";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
+import constants from "../../constants";
 
 const PortfolioItem = (props) => {
   const { url, thumbnail, description, techs, title } = props;
@@ -65,7 +66,7 @@ const PortfolioSection = () => {
     },
   ];
   return (
-    <div id="portfolio" className={styles.container}>
+    <div id={constants.sectionID.PORTFOLIO} className={styles.container}>
       <ScrollAnimation
         animateOnce
         duration={0.5}

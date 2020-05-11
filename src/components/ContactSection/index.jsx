@@ -6,6 +6,7 @@ import classnames from "classnames";
 import emailjs from "emailjs-com";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
+import constants from "../../constants";
 
 const ContactSection = () => {
   const [name, setName] = useState("");
@@ -81,7 +82,7 @@ const ContactSection = () => {
     }
   };
   return (
-    <div id="contact" className={styles.container}>
+    <div id={constants.sectionID.CONTACT} className={styles.container}>
       <ScrollAnimation
         duration={0.7}
         animateOnce

@@ -3,10 +3,11 @@ import Titles from "../shared/Titles";
 import styles from "./xp.module.scss";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
+import constants from "../../constants";
 
 const XpSection = () => {
   return (
-    <div id="experience" className={styles.container}>
+    <div id={constants.sectionID.EXPERIENCE} className={styles.container}>
       <ScrollAnimation
         animateOnce
         duration={0.7}
