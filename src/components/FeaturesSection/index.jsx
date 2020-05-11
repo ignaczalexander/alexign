@@ -33,29 +33,15 @@ const FeatureItem = (props) => {
 
 const FeaturesSection = () => {
   const frontendSkills = [
+    "JavaScript",
     "React.js",
     "Redux",
     "HTML/CSS",
-    "Node.js",
     "Gatsby",
     "Vue.js",
   ];
-  const backendSkills = [
-    "React.js",
-    "Redux",
-    "HTML/CSS",
-    "Node.js",
-    "Gatsby",
-    "Vue.js",
-  ];
-  const iosSkills = [
-    "React.js",
-    "Redux",
-    "HTML/CSS",
-    "Node.js",
-    "Gatsby",
-    "Vue.js",
-  ];
+  const backendSkills = ["Node.js", "Express", "MongoDB", "SQL", ".NET", "C#"];
+  const iosSkills = ["Swift", "CocoaPods", "Firebase", "MapKit"];
 
   const params = {
     pagination: {
