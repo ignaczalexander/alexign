@@ -1,0 +1,25 @@
+@import "../../assets/styles/mixins.scss";
+.container {
+  background-color: #222222;
+  color: white;
+  padding: 2rem;
+}
+.edu_list {
+  padding-left: 1.5rem;
+}
+
+.edu_item {
+  position: relative;
+  margin: auto;
+  margin-bottom: 2rem;
+  max-width: 400px;
+  .degree {
+    opacity: 0.6;
+  }
+  .name {
+    font-weight: 700;
+  }
+  &::before {
+    @include list-dot(rgba(255, 255, 255, 0.521));
+  }
+}
