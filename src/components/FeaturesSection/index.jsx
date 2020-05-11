@@ -5,6 +5,7 @@ import "animate.css/animate.min.css";
 import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
 import "./swiper.css";
+import constants from "../../constants";
 
 const FeatureItem = (props) => {
   const { skills, icon, title, description, color } = props;
@@ -73,7 +74,7 @@ const FeaturesSection = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div id={constants.sectionID.SKILLS} className={styles.container}>
       <Swiper {...params}>
         <div>
           <FeatureItem

@@ -3,10 +3,11 @@ import styles from "./edu.module.scss";
 import Titles from "../shared/Titles";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
+import constants from "../../constants";
 
 const EduSection = () => {
   return (
-    <div id="education" className={styles.container}>
+    <div id={constants.sectionID.EDUCATION} className={styles.container}>
       <ScrollAnimation
         duration={0.7}
         animateOnce
