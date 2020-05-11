@@ -79,8 +79,9 @@ const PortfolioSection = () => {
         />
       </ScrollAnimation>
       <div className={styles.elements}>
-        {portfolioItems.map((item) => (
+        {portfolioItems.map((item, i) => (
           <PortfolioItem
+            key={i}
             description={item.description}
             thumbnail={item.thumbnail}
             url={item.url}

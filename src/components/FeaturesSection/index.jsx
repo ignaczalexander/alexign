@@ -17,7 +17,7 @@ const FeatureItem = (props) => {
         <div className={styles.description}>{description}</div>
         <div className={styles.skill_list}>
           {skills.map((skill) => (
-            <div className={styles.list_item}>
+            <div key={skill} className={styles.list_item}>
               <div
                 style={{ backgroundColor: color }}
                 className={styles.dot}
