@@ -1,4 +1,4 @@
-@import "../../assets/styles/colors.scss";
+@use "src/assets/styles/colors.scss";
 .container {
   background-color: #f7fcff;
 
@@ -28,7 +28,7 @@
   transition: all 0.2s ease-out;
   i {
     font-size: 2.5rem;
-    color: $blue_primary;
+    color: colors.$blue_primary;
   }
   .description {
     font-weight: 400;
@@ -48,7 +48,7 @@
       width: 6px;
       border-radius: 50%;
       opacity: 0.5;
-      background-color: $blue_primary;
+      background-color: colors.$blue_primary;
       margin-right: 0.75rem;
     }
   }

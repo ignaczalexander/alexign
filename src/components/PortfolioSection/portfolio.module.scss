@@ -1,5 +1,5 @@
-@import "../../assets/styles/colors.scss";
-@import "../../assets/styles/mixins.scss";
+@use "src/assets/styles/colors.scss";
+@use "src/assets/styles/mixins.scss";
 $element_height_sm: 160px;
 $element_width_sm: 200px;
 $element_height_lg: 170px;
@@ -25,7 +25,7 @@ $element_width_lg: 260px;
   .info {
     position: relative;
     &::before {
-      @include list-dot(rgb(151, 151, 151));
+      @include mixins.list-dot(rgb(151, 151, 151));
     }
   }
   .techs {
@@ -46,7 +46,7 @@ $element_width_lg: 260px;
     padding-top: 56%;
   }
   .overlay {
-    background-color: $blue_primary;
+    background-color: colors.$blue_primary;
     opacity: 0.5;
     border-radius: 5px;
     position: absolute;
