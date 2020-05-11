@@ -1,0 +1,10 @@
+@mixin list-dot($color) {
+  content: "";
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  left: -20px;
+  top: 50%;
+  background-color: $color;
+  position: absolute;
+}
