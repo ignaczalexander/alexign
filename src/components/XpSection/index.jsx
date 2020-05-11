@@ -22,9 +22,9 @@ const XpSection = () => {
               <div className={styles.position}>React.js developer</div>
             </div>
             <div className={styles.description}>
-              Accumsan lacus vel facilisis volutpat est. Luctus accumsan tortor
-              posuere ac. Accumsan lacus vel facilisis volutpat est. Luctus
-              accumsan tortor posuere ac.
+              I developed reusable and responsible React components for a price
+              comparison website. I implemented an authentication system using
+              the Facebook Login SDK along with various user pages.
             </div>
           </div>
         </ScrollAnimation>
