@@ -185,7 +185,7 @@
           opacity: 0.75;
           transform: translateY(0px);
         }
-        &:hover:not(.active)::after {
+        &:hover:not(.active):not(.contact)::after {
           opacity: 0.25;
           transform: translateY(0px);
         }

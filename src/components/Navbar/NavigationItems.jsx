@@ -34,6 +34,7 @@ const NavigationItems = (props) => {
         <CustomLink
           className={props.contactClass}
           to={constants.sectionID.CONTACT}
+          activeClass=""
         >
           Contact
         </CustomLink>
