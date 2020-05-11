@@ -1,21 +1,36 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Intro from "../Intro";
 import FeaturesSection from "../FeaturesSection";
-import DetailSection from "../DetailSection";
 import ContactSection from "../ContactSection";
-import wpIllustration from "../../assets/img/undraw_wordpress_utxt.svg";
-import mobileIllustration from "../../assets/img/undraw_progressive_app_m9ms.svg";
+import Navbar from "../Navbar/index.jsx";
 import Footer from "../Footer";
-import styles from "./home.module.scss";
 import PortfolioSection from "../PortfolioSection";
+import EduSection from "../EduSection";
+import XpSection from "../XpSection";
 
 export const Home = () => {
+  const [isSticky, setSticky] = useState(false);
+  const ref = useRef(null);
+  const handleScroll = () => {
+    if (ref.current) {
+      setSticky(ref.current.getBoundingClientRect().top < 0);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", () => handleScroll);
+    };
+  }, []);
   return (
-    <div>
+    <div ref={ref}>
+      <Navbar isSticky={isSticky} />
       <Intro />
       <FeaturesSection />
-      <DetailSection img={wpIllustration} />
-      <DetailSection img={mobileIllustration} reverse />
+      <EduSection />
+      <XpSection />
       <PortfolioSection />
       <ContactSection />
       <Footer />
