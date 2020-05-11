@@ -4,8 +4,7 @@ import illustration from "../../assets/img/undraw_message_sent_1030.svg";
 import Titles from "../shared/Titles";
 import classnames from "classnames";
 import emailjs from "emailjs-com";
-import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.min.css";
+import ScrollAnimation from "../shared/ScrollAnimation";
 import constants from "../../constants";
 
 const ContactSection = () => {
@@ -85,8 +84,6 @@ const ContactSection = () => {
     <div id={constants.sectionID.CONTACT} className={styles.container}>
       <ScrollAnimation
         duration={0.7}
-        animateOnce
-        initiallyVisible
         animateIn="animate__fadeInDown"
         offset={0}
       >
@@ -98,11 +95,8 @@ const ContactSection = () => {
       <div className={styles.row}>
         <ScrollAnimation
           duration={0.7}
-          animateOnce
           className={styles.img}
           animateIn="animate__fadeInLeft"
-          offset={0}
-          initiallyVisible
         >
           <img src={illustration} alt="" />
         </ScrollAnimation>
@@ -115,9 +109,7 @@ const ContactSection = () => {
           <ScrollAnimation
             className={styles.form}
             duration={0.7}
-            animateOnce
             animateIn="animate__fadeInRight"
-            offset={0}
           >
             <form onSubmit={handleSend}>
               {errors.length > 0 && (

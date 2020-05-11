@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./intro.module.scss";
 import illustration from "../../assets/img/undraw_web_developer_p3e5.svg";
-import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.min.css";
+import ScrollAnimation from "../shared/ScrollAnimation";
 
 const Intro = () => {
   return (
@@ -10,7 +9,6 @@ const Intro = () => {
       <div className={styles.content}>
         <div className={styles.text}>
           <ScrollAnimation
-            animateOnce
             duration={0.6}
             delay={200}
             animateIn="animate__fadeInLeft"

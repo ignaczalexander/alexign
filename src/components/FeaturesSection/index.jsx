@@ -1,16 +1,15 @@
 import React from "react";
 import styles from "./features.module.scss";
-import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.min.css";
 import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
 import "./swiper.css";
 import constants from "../../constants";
+import ScrollAnimation from "../shared/ScrollAnimation";
 
 const FeatureItem = (props) => {
   const { skills, icon, title, description, color } = props;
   return (
-    <ScrollAnimation animateOnce duration={0.5} animateIn="animate__zoomIn">
+    <ScrollAnimation duration={0.5} animateIn="animate__zoomIn">
       <div className={styles.feature_item}>
         <i style={{ color: color }} className={icon}></i>
         <h3>{title}</h3>
