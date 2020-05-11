@@ -3,73 +3,40 @@ import { Link } from "react-scroll";
 import constants from "../../constants";
 
 const NavigationItems = (props) => {
+  const CustomLink = (localProps) => (
+    <Link
+      smooth
+      duration={400}
+      offset={-50}
+      onClick={props.onClick}
+      activeClass={props.activeClass}
+      spy
+      {...localProps}
+    >
+      {localProps.children}
+    </Link>
+  );
   return (
     <React.Fragment>
       <li>
-        <Link
-          onClick={props.onClick}
-          activeClass={props.activeClass}
-          smooth
-          duration={400}
-          to={constants.sectionID.SKILLS}
-          offset={-50}
-          spy
-        >
-          Skills
-        </Link>
+        <CustomLink to={constants.sectionID.SKILLS}>Skills</CustomLink>
       </li>
       <li>
-        <Link
-          onClick={props.onClick}
-          activeClass={props.activeClass}
-          smooth
-          duration={400}
-          to={constants.sectionID.EDUCATION}
-          offset={-50}
-          spy
-        >
-          Education
-        </Link>
+        <CustomLink to={constants.sectionID.EDUCATION}>Education</CustomLink>
       </li>
       <li>
-        <Link
-          spy
-          onClick={props.onClick}
-          activeClass={props.activeClass}
-          smooth
-          duration={400}
-          to={constants.sectionID.EXPERIENCE}
-          offset={-50}
-        >
-          Experience
-        </Link>
+        <CustomLink to={constants.sectionID.EXPERIENCE}>Experience</CustomLink>
       </li>
       <li>
-        <Link
-          onClick={props.onClick}
-          spy
-          activeClass={props.activeClass}
-          smooth
-          duration={400}
-          to={constants.sectionID.PORTFOLIO}
-          offset={-50}
-        >
-          Portfolio
-        </Link>
+        <CustomLink to={constants.sectionID.PORTFOLIO}>Portfolio</CustomLink>
       </li>
       <li>
-        <Link
-          onClick={props.onClick}
-          spy
-          activeClass={props.activeClass}
+        <CustomLink
           className={props.contactClass}
-          smooth
-          duration={400}
           to={constants.sectionID.CONTACT}
-          offset={-50}
         >
           Contact
-        </Link>
+        </CustomLink>
       </li>
     </React.Fragment>
   );
