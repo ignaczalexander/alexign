@@ -1,104 +1,46 @@
 .container {
   background-color: #2a3b48;
   padding: 2rem;
-  padding-bottom: 0;
   color: white;
-
-  hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #a0a5aa;
-    padding: 0;
-  }
-}
-
-.main {
-  padding-bottom: 1rem;
-}
-.about {
-  margin-bottom: 2rem;
-  .title {
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  .description {
-    font-weight: 400;
-  }
-}
-.lists {
-  display: flex;
-  justify-content: space-between;
-}
-.list {
-  div {
-    font-weight: 600;
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-    a {
-      color: white;
-      display: inline-block;
-    }
-    li:not(:last-child) {
-      margin-bottom: 0.5rem;
-    }
-  }
-}
-
-.bottom {
-  color: #afafaf;
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 0;
-  padding-bottom: 1rem;
-  font-size: 0.75rem;
-  .info {
-    margin-bottom: 0.75rem;
-  }
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  opacity: 0.5;
+  font-size: 0.9rem;
+  max-width: 400px;
+  margin: auto;
+  margin-bottom: 1.5rem;
+}
+
+.socials {
+  margin-bottom: 1.5rem;
   a {
-    margin-left: 1rem;
-    color: #afafaf;
+    color: white;
+    opacity: 0.5;
+    margin: 0 0.75rem;
+    display: inline-block;
     &:hover {
-      color: white;
+      opacity: 0.75;
+      i {
+        transform: scale(1.25);
+      }
     }
+  }
+  i {
+    font-size: 2rem;
+    transition: all 0.2s ease;
   }
 }
-@media only screen and (min-width: 768px) {
-  .container {
-    padding: 4rem 4rem 0 4rem;
-  }
 
-  .main {
-    padding-bottom: 2rem;
-    display: flex;
-  }
-  .about {
-    flex: 1;
-    .description {
-      padding-right: 4rem;
-    }
-  }
-  .lists {
-    justify-content: space-around;
-    flex: 1;
-  }
-  .list {
-    div {
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-  }
-  .bottom {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1.75rem 0;
-  }
+.credit {
+  font-size: 0.75rem;
+  opacity: 0.5;
 }
