@@ -4,6 +4,8 @@ import illustration from "../../assets/img/undraw_message_sent_1030.svg";
 import Titles from "../shared/Titles";
 import classnames from "classnames";
 import emailjs from "emailjs-com";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 
 const ContactSection = () => {
   const [name, setName] = useState("");
@@ -28,7 +30,7 @@ const ContactSection = () => {
     }
     return true;
   };
-  const handleSend = e => {
+  const handleSend = (e) => {
     e.preventDefault();
     console.log("errors", errors);
     if (checkFields()) {
@@ -37,7 +39,7 @@ const ContactSection = () => {
         name,
         email,
         phone,
-        description
+        description,
       };
       emailjs
         .send(
@@ -47,12 +49,12 @@ const ContactSection = () => {
           "user_ZfjDw5OfBuBl5p2hrsjzJ"
         )
         .then(
-          response => {
+          (response) => {
             console.log("SUCCESS!", response.status, response.text);
             setEmailSent(true);
             setLoading(false);
           },
-          err => {
+          (err) => {
             console.log("FAILED...", err);
             setLoading(false);
           }
@@ -80,78 +82,103 @@ const ContactSection = () => {
   };
   return (
     <div id="contact" className={styles.container}>
-      <Titles
-        title="Get in touch"
-        subtitle="Contact us to start working together"
-      />
+      <ScrollAnimation
+        duration={0.7}
+        animateOnce
+        initiallyVisible
+        animateIn="animate__fadeInDown"
+        offset={0}
+      >
+        <Titles
+          title="Get in touch"
+          subtitle="Contact me to start working together"
+        />
+      </ScrollAnimation>
       <div className={styles.row}>
-        <img src={illustration} alt="" />
+        <ScrollAnimation
+          duration={0.7}
+          animateOnce
+          className={styles.img}
+          animateIn="animate__fadeInLeft"
+          offset={0}
+          initiallyVisible
+        >
+          <img src={illustration} alt="" />
+        </ScrollAnimation>
         {emailSent ? (
           <div className={styles.email_sent}>
             <div>Thank you for contacting us!</div>
             <div>We will get backt to you in 24 hours.</div>
           </div>
         ) : (
-          <form onSubmit={handleSend}>
-            {errors.length > 0 && (
-              <small>Please fill in the required fields</small>
-            )}
-            <input
-              id="name"
-              onChange={e => handleChange(e, "name")}
-              value={name}
-              placeholder="Name"
-              type="text"
-              className={classnames({
-                [styles.invalid]: errors.includes("name")
-              })}
-            />
-            <input
-              id="email"
-              onChange={e => handleChange(e, "email")}
-              value={email}
-              placeholder="Email"
-              type="email"
-              className={classnames({
-                [styles.invalid]: errors.includes("email")
-              })}
-            />
-            <input
-              id="phone"
-              onChange={e => handleChange(e, "phone")}
-              value={phone}
-              placeholder="Phone number"
-              type="text"
-            />
-            <textarea
-              placeholder="Tell us about your case"
-              name="description"
-              id="description"
-              onChange={e => handleChange(e, "description")}
-              value={description}
-              cols="30"
-              rows="10"
-              className={classnames({
-                [styles.invalid]: errors.includes("description")
-              })}
-            ></textarea>
-            <button
-              type="submit"
-              disabled={loading}
-              className={styles.btn_send}
-            >
-              {loading ? (
-                <div className={styles.dots3} id="dots3">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              ) : (
-                <span>Send</span>
+          <ScrollAnimation
+            className={styles.form}
+            duration={0.7}
+            animateOnce
+            animateIn="animate__fadeInRight"
+            offset={0}
+          >
+            <form onSubmit={handleSend}>
+              {errors.length > 0 && (
+                <small>Please fill in the required fields</small>
               )}
-            </button>
-          </form>
+              <input
+                id="name"
+                onChange={(e) => handleChange(e, "name")}
+                value={name}
+                placeholder="Name"
+                type="text"
+                className={classnames({
+                  [styles.invalid]: errors.includes("name"),
+                })}
+              />
+              <input
+                id="email"
+                onChange={(e) => handleChange(e, "email")}
+                value={email}
+                placeholder="Email"
+                type="email"
+                className={classnames({
+                  [styles.invalid]: errors.includes("email"),
+                })}
+              />
+              <input
+                id="phone"
+                onChange={(e) => handleChange(e, "phone")}
+                value={phone}
+                placeholder="Phone number"
+                type="text"
+              />
+              <textarea
+                placeholder="Your message to me "
+                name="description"
+                id="description"
+                onChange={(e) => handleChange(e, "description")}
+                value={description}
+                cols="30"
+                rows="10"
+                className={classnames({
+                  [styles.invalid]: errors.includes("description"),
+                })}
+              ></textarea>
+              <button
+                type="submit"
+                disabled={loading}
+                className={styles.btn_send}
+              >
+                {loading ? (
+                  <div className={styles.dots3} id="dots3">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                ) : (
+                  <span>Send</span>
+                )}
+              </button>
+            </form>
+          </ScrollAnimation>
         )}
       </div>
     </div>
