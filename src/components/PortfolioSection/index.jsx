@@ -1,55 +1,90 @@
 import React from "react";
 import styles from "./portfolio.module.scss";
 import Titles from "../shared/Titles";
-import tmwThumbnail from "../../assets/img/trackmywork-thumbnail.png";
+import tmwThumbnail from "../../assets/img/trackMyWorkThumbnail.png";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 
-const PortfolioItem = props => {
-  const { url, thumbnail, description } = props;
+const PortfolioItem = (props) => {
+  const { url, thumbnail, description, techs, title } = props;
   return (
-    <a
-      className={styles.element}
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img src={thumbnail} alt="" />
-
-      <div className={styles.overlay}>
-        <div>{description}</div>
+    <ScrollAnimation animateOnce duration={0.5} animateIn="animate__fadeInLeft">
+      <div className={styles.item}>
+        <div className={styles.text}>
+          <div className={styles.info}>
+            <div className={styles.techs}>{techs}</div>
+            <div className={styles.title}>{title}</div>
+          </div>
+          <div className={styles.description}>{description}</div>
+        </div>
+        <div className={styles.thumbnail}>
+          {/* <img src={thumbnail} alt="" /> */}
+          <div className={styles.overlay}></div>
+        </div>
       </div>
-    </a>
+    </ScrollAnimation>
+    // <a
+    //   className={styles.element}
+    //   href={url}
+    //   target="_blank"
+    //   rel="noopener noreferrer"
+    // >
+    //   <img src={thumbnail} alt="" />
+
+    //   <div className={styles.overlay}>
+    //     <div>{description}</div>
+    //   </div>
+    // </a>
   );
 };
 const PortfolioSection = () => {
   const portfolioItems = [
     {
-      description: "A minimalistic work shift tracker",
+      title: "TrackMyWork",
+      techs: "React, Redux, HTML/CSS, Node.js, MongoDB",
+      description:
+        "Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk",
       thumbnail: tmwThumbnail,
-      url: "https://tmwapp.herokuapp.com"
+      url: "https://tmwapp.herokuapp.com",
     },
     {
-      description: "A minimalistic work shift tracker",
+      title: "TrackMyWork",
+      techs: "React, Redux, HTML/CSS, Node.js, MongoDB",
+      description:
+        "Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk",
       thumbnail: tmwThumbnail,
-      url: "https://tmwapp.herokuapp.com"
+      url: "https://tmwapp.herokuapp.com",
     },
     {
-      description: "A minimalistic work shift tracker",
+      title: "TrackMyWork",
+      techs: "React, Redux, HTML/CSS, Node.js, MongoDB",
+      description:
+        "Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk",
       thumbnail: tmwThumbnail,
-      url: "https://tmwapp.herokuapp.com"
-    }
+      url: "https://tmwapp.herokuapp.com",
+    },
   ];
   return (
-    <div className={styles.container}>
-      <Titles
-        title="Our portfolio"
-        subtitle="Take a look at our featured work"
-      />
+    <div id="portfolio" className={styles.container}>
+      <ScrollAnimation
+        animateOnce
+        duration={0.5}
+        animateIn="animate__fadeInRight"
+        offset={0}
+      >
+        <Titles
+          title="My portfolio"
+          subtitle="Take a look at my recent projects"
+        />
+      </ScrollAnimation>
       <div className={styles.elements}>
-        {portfolioItems.map(item => (
+        {portfolioItems.map((item) => (
           <PortfolioItem
             description={item.description}
             thumbnail={item.thumbnail}
             url={item.url}
+            title={item.title}
+            techs={item.techs}
           />
         ))}
       </div>
