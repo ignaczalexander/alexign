@@ -1,25 +1,30 @@
 import React from "react";
 import styles from "./intro.module.scss";
-import illustration from "../../assets/img/undraw_programming_2svr.svg";
-import { Navbar } from "../Navbar";
-import Titles from "../shared/Titles";
+import illustration from "../../assets/img/undraw_web_developer_p3e5.svg";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 
 const Intro = () => {
   return (
     <div className={styles.container}>
-      <Navbar />
       <div className={styles.content}>
         <div className={styles.text}>
-          <h1>Full Stack Web & iOS developer</h1>
-          {/* <h2>Beautiful. Fast. Affordable.</h2> */}
+          <ScrollAnimation
+            animateOnce
+            duration={0.6}
+            delay={200}
+            animateIn="animate__fadeInLeft"
+          >
+            <h2>Hi! My name is Alex. I am a</h2>
+            <h1>Full Stack Web & iOS developer</h1>
+          </ScrollAnimation>
         </div>
         <img className={styles.illustration} src={illustration} alt="" />
         <div className={styles.description}>
-          <h2>See what we can do</h2>
+          <h2>See what I can do</h2>
           <p>
-            Lorem ipsume sad sde Lorem ipsume sad sde Lorem ipsume sad sde Lorem
-            ipsume sad sde Lorem ipsume sad sde ipsume sad sde Lorem ipsume sad
-            sdeipsume sad sde Lorem ipsume sad sde
+            Ut enim blandit volutpat maecenas. Consequat nisl vel pretium
+            lectus. Ipsum dolor sit amet consectetur.
           </p>
         </div>
       </div>
