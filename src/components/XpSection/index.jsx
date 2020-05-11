@@ -1,27 +1,21 @@
 import React from "react";
 import Titles from "../shared/Titles";
 import styles from "./xp.module.scss";
-import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.min.css";
+import ScrollAnimation from "../shared/ScrollAnimation";
 import constants from "../../constants";
 
 const XpSection = () => {
   return (
     <div id={constants.sectionID.EXPERIENCE} className={styles.container}>
       <ScrollAnimation
-        animateOnce
+        offset={0}
         duration={0.7}
         animateIn="animate__fadeInRight"
-        offset={0}
       >
         <Titles title="Professional Experience" icon="fas fa-briefcase" />
       </ScrollAnimation>
       <div className={styles.xp_list}>
-        <ScrollAnimation
-          animateOnce
-          duration={0.7}
-          animateIn="animate__fadeInLeft"
-        >
+        <ScrollAnimation duration={0.7} animateIn="animate__fadeInLeft">
           <div className={styles.xp_item}>
             <div className={styles.info}>
               <div className={styles.company}>DinKurv.dk</div>

@@ -2,14 +2,13 @@ import React from "react";
 import styles from "./portfolio.module.scss";
 import Titles from "../shared/Titles";
 import tmwThumbnail from "../../assets/img/trackMyWorkThumbnail.png";
-import ScrollAnimation from "react-animate-on-scroll";
-import "animate.css/animate.min.css";
+import ScrollAnimation from "../shared/ScrollAnimation";
 import constants from "../../constants";
 
 const PortfolioItem = (props) => {
   const { url, thumbnail, description, techs, title } = props;
   return (
-    <ScrollAnimation animateOnce duration={0.5} animateIn="animate__fadeInLeft">
+    <ScrollAnimation duration={0.5} animateIn="animate__fadeInLeft">
       <div className={styles.item}>
         <div className={styles.text}>
           <div className={styles.info}>
@@ -68,7 +67,6 @@ const PortfolioSection = () => {
   return (
     <div id={constants.sectionID.PORTFOLIO} className={styles.container}>
       <ScrollAnimation
-        animateOnce
         duration={0.5}
         animateIn="animate__fadeInRight"
         offset={0}
