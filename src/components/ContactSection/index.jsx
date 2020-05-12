@@ -23,7 +23,6 @@ const ContactSection = () => {
     }
     if (email.length < 4) localErrors.push("email");
     if (description.length === 0) localErrors.push("description");
-    console.log("localerr", localErrors);
     setErrors(localErrors);
     if (localErrors.length > 0) {
       return false;
@@ -32,7 +31,6 @@ const ContactSection = () => {
   };
   const handleSend = (e) => {
     e.preventDefault();
-    console.log("errors", errors);
     if (checkFields()) {
       setLoading(true);
       const templateParams = {
@@ -50,12 +48,10 @@ const ContactSection = () => {
         )
         .then(
           (response) => {
-            console.log("SUCCESS!", response.status, response.text);
             setEmailSent(true);
             setLoading(false);
           },
           (err) => {
-            console.log("FAILED...", err);
             setLoading(false);
           }
         );
@@ -102,8 +98,8 @@ const ContactSection = () => {
         </ScrollAnimation>
         {emailSent ? (
           <div className={styles.email_sent}>
-            <div>Thank you for contacting us!</div>
-            <div>We will get backt to you in 24 hours.</div>
+            <div>Thank you for contacting me!</div>
+            <div>I will get back to you as soon as possible.</div>
           </div>
         ) : (
           <ScrollAnimation
