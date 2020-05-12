@@ -14,7 +14,7 @@ const Intro = () => {
             animateIn="animate__fadeInLeft"
           >
             <h2>Hi! My name is Alex. I am a</h2>
-            <h1>Full Stack Web & iOS developer</h1>
+            <h1>Full Stack Web &amp; iOS developer</h1>
           </ScrollAnimation>
         </div>
         <img className={styles.illustration} src={illustration} alt="" />
