@@ -4,22 +4,24 @@
   color: white;
   padding: 2rem;
 }
-.edu_list {
+.items {
   padding-left: 1.5rem;
 }
 
-.edu_item {
-  position: relative;
+.item {
   margin: auto;
   margin-bottom: 2rem;
   max-width: 400px;
-  .degree {
-    opacity: 0.6;
+  .overtitle {
+    opacity: 0.75;
   }
-  .name {
+  .title {
     font-weight: 700;
   }
-  &::before {
+  .info {
+    position: relative;
+  }
+  .info::before {
     @include mixins.list-dot(rgba(255, 255, 255, 0.521));
   }
 }
