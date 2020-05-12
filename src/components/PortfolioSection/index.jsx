@@ -3,6 +3,7 @@ import styles from "./portfolio.module.scss";
 import Titles from "../shared/Titles";
 import ScrollAnimation from "../shared/ScrollAnimation";
 import tmwLogo from "../../assets/img/trackMyWork-logo.png";
+import alexignLogo from "../../assets/img/alexign-logo.png";
 import constants from "../../constants";
 
 const PortfolioItem = (props) => {
@@ -36,25 +37,17 @@ const PortfolioSection = () => {
       title: "TrackMyWork",
       techs: "React, Redux, HTML/CSS, Node.js, MongoDB",
       description:
-        "Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk",
+        "TrackMyWork is a minimalist work shift tracker website made with a React Front End and a Node.js REST API server. It features secure user authentication with JWT and protected routes. ",
       thumbnail: tmwLogo,
       url: "https://tmwapp.herokuapp.com",
     },
     {
-      title: "TrackMyWork",
-      techs: "React, Redux, HTML/CSS, Node.js, MongoDB",
+      title: "Alexign - Personal page",
+      techs: "React, HTML/CSS, SCSS, Progressive Web App, EmailJS",
       description:
-        "Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk",
-      thumbnail: tmwLogo,
-      url: "https://tmwapp.herokuapp.com",
-    },
-    {
-      title: "TrackMyWork",
-      techs: "React, Redux, HTML/CSS, Node.js, MongoDB",
-      description:
-        "Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk",
-      thumbnail: tmwLogo,
-      url: "https://tmwapp.herokuapp.com",
+        "You are looking at it right now. A React single page progressive web app with animations, fast loading time and EmailJS integration for handling message sending on the client side.",
+      thumbnail: alexignLogo,
+      url: "https://alexign.com",
     },
   ];
   return (
