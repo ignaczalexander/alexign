@@ -44,9 +44,9 @@ const ContactSection = () => {
       emailjs
         .send(
           "gmail",
-          "template_R4JkEl1b",
+          process.env.REACT_APP_EMAILJS_TEMPLATEID,
           templateParams,
-          "user_ZfjDw5OfBuBl5p2hrsjzJ"
+          process.env.REACT_APP_EMAILJS_USERID
         )
         .then(
           (response) => {
@@ -95,7 +95,7 @@ const ContactSection = () => {
       <div className={styles.row}>
         <ScrollAnimation
           duration={0.7}
-          className={styles.img}
+          className={styles.img_container}
           animateIn="animate__fadeInLeft"
         >
           <img src={illustration} alt="" />
