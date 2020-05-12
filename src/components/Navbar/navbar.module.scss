@@ -68,7 +68,26 @@
   transition: 0.3s;
   z-index: 100;
   .close {
-    top: 1rem;
+    $h: 24px;
+    $w: 4px;
+    width: $h;
+    height: $h;
+    top: 1.25rem;
+    &::before,
+    &::after {
+      position: absolute;
+      background-color: #4e4e4e;
+      content: "";
+      height: $h;
+      width: $w;
+      left: 10px;
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
   }
   .list_mobile {
     position: absolute;

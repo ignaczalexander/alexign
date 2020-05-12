@@ -44,12 +44,7 @@ const MobileNavbar = () => {
         })}
         ref={mobileListRef}
       >
-        <FontAwesomeIcon
-          size="2x"
-          className={styles.close}
-          onClick={() => setNavOpened(false)}
-          icon="times"
-        />
+        <div onClick={() => setNavOpened(false)} className={styles.close}></div>
 
         <ul className={styles.list_mobile}>
           <NavigationItems onClick={() => setNavOpened(false)} />

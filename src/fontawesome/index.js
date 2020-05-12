@@ -4,7 +4,6 @@ import {
   faTerminal,
   faGraduationCap,
   faBriefcase,
-  faTimes,
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -19,7 +18,6 @@ library.add(
   faApple,
   faGraduationCap,
   faBriefcase,
-  faTimes,
   faBars,
   faGithub,
   faLinkedin
