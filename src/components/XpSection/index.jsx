@@ -12,7 +12,7 @@ const XpSection = () => {
         duration={0.7}
         animateIn="animate__fadeInRight"
       >
-        <Titles title="Professional Experience" icon="fas fa-briefcase" />
+        <Titles title="Professional Experience" icon="briefcase" />
       </ScrollAnimation>
       <div className={styles.xp_list}>
         <ScrollAnimation duration={0.7} animateIn="animate__fadeInLeft">

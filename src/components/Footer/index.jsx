@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./footer.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
   return (
@@ -15,14 +16,14 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-linkedin"></i>
+          <FontAwesomeIcon size="2x" icon={["fab", "linkedin"]} />
         </a>
         <a
           href="https://github.com/ignaczalexander"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-github"></i>
+          <FontAwesomeIcon size="2x" icon={["fab", "github"]} />
         </a>
       </div>
       <div className={styles.credit}>Website designed and developed by me</div>
