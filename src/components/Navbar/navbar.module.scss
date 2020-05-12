@@ -16,10 +16,6 @@
   &.sticky {
     box-shadow: 0 0px 20px rgba(0, 0, 0, 0.178);
   }
-  i {
-    position: absolute;
-    left: 1.5rem;
-  }
 }
 .logo {
   display: flex;
@@ -31,8 +27,9 @@
 }
 .open,
 .close {
-  font-size: 1.5rem;
   cursor: pointer;
+  position: absolute;
+  left: 1.5rem;
 }
 .list_desktop {
   display: none;
@@ -70,12 +67,8 @@
   overflow-x: hidden;
   transition: 0.3s;
   z-index: 100;
-
   .close {
-    color: black;
-    position: absolute;
     top: 1rem;
-    left: 1.5rem;
   }
   .list_mobile {
     position: absolute;
@@ -92,6 +85,7 @@
       a {
         color: black;
         font-size: 1.5rem;
+        cursor: pointer;
       }
     }
   }
