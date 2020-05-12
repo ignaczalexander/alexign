@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./portfolio.module.scss";
 import Titles from "../shared/Titles";
-import tmwThumbnail from "../../assets/img/trackMyWorkThumbnail.png";
 import ScrollAnimation from "../shared/ScrollAnimation";
+import tmwLogo from "../../assets/img/trackMyWork-logo.png";
 import constants from "../../constants";
 
 const PortfolioItem = (props) => {
@@ -17,24 +17,17 @@ const PortfolioItem = (props) => {
           </div>
           <div className={styles.description}>{description}</div>
         </div>
-        <div className={styles.thumbnail}>
-          {/* <img src={thumbnail} alt="" /> */}
-          <div className={styles.overlay}></div>
-        </div>
+        <a
+          className={styles.thumbnail}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={title}
+        >
+          <img src={thumbnail} alt="" />
+        </a>
       </div>
     </ScrollAnimation>
-    // <a
-    //   className={styles.element}
-    //   href={url}
-    //   target="_blank"
-    //   rel="noopener noreferrer"
-    // >
-    //   <img src={thumbnail} alt="" />
-
-    //   <div className={styles.overlay}>
-    //     <div>{description}</div>
-    //   </div>
-    // </a>
   );
 };
 const PortfolioSection = () => {
@@ -44,7 +37,7 @@ const PortfolioSection = () => {
       techs: "React, Redux, HTML/CSS, Node.js, MongoDB",
       description:
         "Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk",
-      thumbnail: tmwThumbnail,
+      thumbnail: tmwLogo,
       url: "https://tmwapp.herokuapp.com",
     },
     {
@@ -52,7 +45,7 @@ const PortfolioSection = () => {
       techs: "React, Redux, HTML/CSS, Node.js, MongoDB",
       description:
         "Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk",
-      thumbnail: tmwThumbnail,
+      thumbnail: tmwLogo,
       url: "https://tmwapp.herokuapp.com",
     },
     {
@@ -60,7 +53,7 @@ const PortfolioSection = () => {
       techs: "React, Redux, HTML/CSS, Node.js, MongoDB",
       description:
         "Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk Lorem ipsum aso ooo skksd kskdk",
-      thumbnail: tmwThumbnail,
+      thumbnail: tmwLogo,
       url: "https://tmwapp.herokuapp.com",
     },
   ];
