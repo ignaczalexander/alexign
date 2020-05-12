@@ -29,12 +29,12 @@
     display: inline-block;
     &:hover {
       opacity: 0.75;
-      i {
+      svg {
         transform: scale(1.25);
       }
     }
   }
-  i {
+  svg {
     font-size: 2rem;
     transition: all 0.2s ease;
   }
