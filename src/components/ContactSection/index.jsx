@@ -116,6 +116,7 @@ const ContactSection = () => {
                 <small>Please fill in the required fields</small>
               )}
               <input
+                title="Name"
                 id="name"
                 onChange={(e) => handleChange(e, "name")}
                 value={name}
@@ -126,6 +127,7 @@ const ContactSection = () => {
                 })}
               />
               <input
+                title="email address"
                 id="email"
                 onChange={(e) => handleChange(e, "email")}
                 value={email}
@@ -136,6 +138,7 @@ const ContactSection = () => {
                 })}
               />
               <input
+                title="phone number"
                 id="phone"
                 onChange={(e) => handleChange(e, "phone")}
                 value={phone}
@@ -143,6 +146,7 @@ const ContactSection = () => {
                 type="text"
               />
               <textarea
+                title="Your message to me"
                 placeholder="Your message to me "
                 name="description"
                 id="description"
