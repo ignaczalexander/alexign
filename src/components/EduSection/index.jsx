@@ -12,7 +12,7 @@ const EduSection = () => {
         animateIn="animate__fadeInRight"
         offset={0}
       >
-        <Titles title="Education" icon="fas fa-graduation-cap" />
+        <Titles title="Education" icon="graduation-cap" />
       </ScrollAnimation>
       <div className={styles.edu_list}>
         <ScrollAnimation duration={0.7} animateIn="animate__fadeInLeft">

@@ -3,6 +3,7 @@ import classnames from "classnames";
 import styles from "./navbar.module.scss";
 import Logo from "./Logo";
 import NavigationItems from "./NavigationItems";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MobileNavbar = () => {
   const [navOpened, setNavOpened] = useState(false);
@@ -24,10 +25,12 @@ const MobileNavbar = () => {
   }, [mobileListRef, navOpened]);
   return (
     <React.Fragment>
-      <i
+      <FontAwesomeIcon
         onClick={() => setNavOpened(!navOpened)}
-        className={classnames("fas fa-bars", styles.open)}
-      ></i>
+        size="lg"
+        className={styles.open}
+        icon="bars"
+      />
       <Logo />
       <div
         className={classnames(styles.mobile_nav_overlay, {
@@ -41,10 +44,12 @@ const MobileNavbar = () => {
         })}
         ref={mobileListRef}
       >
-        <i
+        <FontAwesomeIcon
+          size="2x"
+          className={styles.close}
           onClick={() => setNavOpened(false)}
-          className={classnames("fas fa-times", styles.close)}
-        ></i>
+          icon="times"
+        />
 
         <ul className={styles.list_mobile}>
           <NavigationItems onClick={() => setNavOpened(false)} />

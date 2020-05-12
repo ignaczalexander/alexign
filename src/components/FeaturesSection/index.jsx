@@ -5,13 +5,14 @@ import "swiper/css/swiper.css";
 import "./swiper.css";
 import constants from "../../constants";
 import ScrollAnimation from "../shared/ScrollAnimation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const FeatureItem = (props) => {
   const { skills, icon, title, description, color } = props;
   return (
     <ScrollAnimation duration={0.5} animateIn="animate__zoomIn">
       <div className={styles.feature_item}>
-        <i style={{ color: color }} className={icon}></i>
+        <FontAwesomeIcon style={{ color: color }} size="2x" icon={icon} />
         <h3>{title}</h3>
         <div className={styles.description}>{description}</div>
         <div className={styles.skill_list}>
@@ -64,7 +65,7 @@ const FeaturesSection = () => {
         <div>
           <FeatureItem
             title="Front End"
-            icon="fas fa-code"
+            icon="code"
             skills={frontendSkills}
             description="Nullam urna sem, vehicula vitae viverra vel, eleifend vel urna. Ut
           vulputate dui a dui tempus, sit amet gravida odio suscipit. Aliquam
@@ -76,7 +77,7 @@ const FeaturesSection = () => {
         <div>
           <FeatureItem
             title="Back End"
-            icon="fas fa-terminal"
+            icon="terminal"
             skills={backendSkills}
             description="Nullam urna sem, vehicula vitae viverra vel, eleifend vel urna. Ut
           vulputate dui a dui tempus, sit amet gravida odio suscipit. Aliquam
@@ -88,7 +89,7 @@ const FeaturesSection = () => {
         <div>
           <FeatureItem
             title="iOS development"
-            icon="fab fa-apple"
+            icon={["fab", "apple"]}
             skills={iosSkills}
             description="Nullam urna sem, vehicula vitae viverra vel, eleifend vel urna. Ut
           vulputate dui a dui tempus, sit amet gravida odio suscipit. Aliquam
