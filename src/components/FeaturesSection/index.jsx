@@ -67,10 +67,7 @@ const FeaturesSection = () => {
             title="Front End"
             icon="code"
             skills={frontendSkills}
-            description="Nullam urna sem, vehicula vitae viverra vel, eleifend vel urna. Ut
-          vulputate dui a dui tempus, sit amet gravida odio suscipit. Aliquam
-          quis eros et dui dignissim.
-          "
+            description="I enjoy working with modern Front End JavaScript frameworks such as React and Vue. By developing many websites my HTML and CSS skills have sharpened as well."
             color="#36aaff"
           />
         </div>
@@ -79,10 +76,7 @@ const FeaturesSection = () => {
             title="Back End"
             icon="terminal"
             skills={backendSkills}
-            description="Nullam urna sem, vehicula vitae viverra vel, eleifend vel urna. Ut
-          vulputate dui a dui tempus, sit amet gravida odio suscipit. Aliquam
-          quis eros et dui dignissim.
-          "
+            description="My Back End skills mainly include creating RESTful APIs using Node.js and .NET with an SQL or NOSQL database layer. I also have experience with authorization and protected routes."
             color="#30E5AD"
           />
         </div>
@@ -91,10 +85,7 @@ const FeaturesSection = () => {
             title="iOS development"
             icon={["fab", "apple"]}
             skills={iosSkills}
-            description="Nullam urna sem, vehicula vitae viverra vel, eleifend vel urna. Ut
-          vulputate dui a dui tempus, sit amet gravida odio suscipit. Aliquam
-          quis eros et dui dignissim.
-          "
+            description="My newest passion is iOS app development. I work comfortably with Swift and the Apple development environment. My most recent apps feature Firebase authentication and realtime cloud database."
             color="#838383"
           />
         </div>
