@@ -47,7 +47,10 @@ const MobileNavbar = () => {
         <div onClick={() => setNavOpened(false)} className={styles.close}></div>
 
         <ul className={styles.list_mobile}>
-          <NavigationItems onClick={() => setNavOpened(false)} />
+          <NavigationItems
+            activeClass={styles.active}
+            onClick={() => setNavOpened(false)}
+          />
         </ul>
       </div>
     </React.Fragment>
