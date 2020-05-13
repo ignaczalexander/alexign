@@ -7,8 +7,7 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.name}>Alexander Ignácz</div>
       <div className={styles.text}>
-        Curabitur eget metus vel dolor rutrum scelerisque. Aenean iaculis lacus
-        vel orci suscipit lobortis.
+        In order to understand recursion, one must first understand recursion.
       </div>
       <div className={styles.socials}>
         <a
