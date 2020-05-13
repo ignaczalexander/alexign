@@ -21,8 +21,9 @@ const Intro = () => {
         <div className={styles.description}>
           <h2>See what I can do</h2>
           <p>
-            Ut enim blandit volutpat maecenas. Consequat nisl vel pretium
-            lectus. Ipsum dolor sit amet consectetur.
+            I'm a motivated and hard-working developer who loves to solve
+            challenges. I've tried many different technologies but my favorite
+            environment is Web and iOS development.
           </p>
         </div>
       </div>
