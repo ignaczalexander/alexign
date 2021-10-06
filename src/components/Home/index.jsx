@@ -30,6 +30,25 @@ export const Home = () => {
       <Intro />
       <FeaturesSection />
       <ExperienceSection
+        sectionId={constants.sectionID.EXPERIENCE}
+        title="Professional experience"
+        icon="briefcase"
+        items={[
+          {
+            title: "Frontend Developer",
+            overTitle: "GraphAware",
+            description:
+              "Developed features and reusable components for a complex graph related project using Vue and TypeScript.\nDefined and implemented end-to-end tests using Cypress, Mocha and Chai.",
+          },
+          {
+            title: "React.js developer",
+            overTitle: "DinKurv.dk",
+            description:
+              "I developed reusable and responsible React components for a price comparison website.\n I implemented an authentication system using the Facebook Login SDK along with various user pages.",
+          },
+        ]}
+      />
+      <ExperienceSection
         sectionId={constants.sectionID.EDUCATION}
         title="Education"
         icon="graduation-cap"
@@ -43,19 +62,6 @@ export const Home = () => {
             title: "Computer Science",
             overTitle: "Academy Profession degree",
             description: "University College of Northern Denmark",
-          },
-        ]}
-      />
-      <ExperienceSection
-        sectionId={constants.sectionID.EXPERIENCE}
-        title="Professional experience"
-        icon="briefcase"
-        items={[
-          {
-            title: "React.js developer",
-            overTitle: "DinKurv.dk",
-            description:
-              "I developed reusable and responsible React components for a price comparison website. I implemented an authentication system using the Facebook Login SDK along with various user pages.",
           },
         ]}
         backgroundColor="#3d84cc"

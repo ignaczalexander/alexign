@@ -64,19 +64,19 @@ const FeaturesSection = () => {
       <Swiper {...params}>
         <div>
           <FeatureItem
-            title="Front End"
+            title="Frontend"
             icon="code"
             skills={frontendSkills}
-            description="I enjoy working with modern Front End JavaScript frameworks such as React and Vue. By developing many websites my HTML and CSS skills have sharpened as well."
+            description="I enjoy working with modern Frontend JavaScript frameworks such as React and Vue. By developing many websites my HTML and CSS skills have sharpened as well."
             color="#36aaff"
           />
         </div>
         <div>
           <FeatureItem
-            title="Back End"
+            title="Backend"
             icon="terminal"
             skills={backendSkills}
-            description="My Back End skills mainly include creating RESTful APIs using Node.js and .NET with an SQL or NOSQL database layer. I also have experience with authorization and protected routes."
+            description="My Backend skills mainly include creating RESTful APIs using Node.js and .NET with an SQL or NOSQL database layer. I also have experience with authorization and protected routes."
             color="#30E5AD"
           />
         </div>
